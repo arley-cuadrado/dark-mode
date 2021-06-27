@@ -1,0 +1,33 @@
+//@import url('./assets/Fonts/Roboto-Bold.ttf');
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+$negro: hsl(230, 17%, 14%);
+$negro2: hsl(232, 19%, 15%);
+$card-dark: hsl(228, 28%, 20%);
+$light: hsl(0, 0%, 100%);
+$light2: #fefefe;
+
+body{
+    font-family: 'Roboto', sans-serif;
+    transition: .3s ease all;
+    margin: 0;
+    .container{
+        padding: 0% 20%;
+    }
+    &.dark{
+        background: $negro;
+        .nav{
+            color: $light;
+            background: $negro2;
+        }
+        .navbar-bg {
+            background: $negro2;
+        }
+        .cards{
+            color: $light;
+            background: $card-dark;
+        }
+    }
+}

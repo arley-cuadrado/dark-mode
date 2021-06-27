@@ -1,0 +1,73 @@
+<section class="container container-cards">
+    
+        <div class="cards" *ngFor="let item of datos"> <!--*ngFor="let dato in datos"-->
+            <div class="top"><img src="{{ item.socialimg }}" alt=""> <span>{{ item.name }}</span></div>
+            <div class="main">
+                <strong> test</strong>
+                <span>{{ item.followers }} </span>
+            </div>
+        
+            <div class="today">
+                <img src="assets/images/icon-up.svg" alt="">
+                <b *ngIf=" item.won"> 
+                    {{ item.won }}
+                    
+                </b>
+
+                <b *ngIf=" item.lost.lenght > item.won.lenght "> 
+             
+                    perdiste...
+                </b>
+                
+
+            </div>
+        </div>
+
+        
+<!--
+    <div *ngIf="!todos">
+        Leyendo los datos...
+    </div>
+-->
+
+<!--
+    <div class="cards">
+        <div class="top"><img src="assets/images/icon-facebook.svg" alt=""> <span>@nathanf</span></div>
+        <div class="main">
+            <strong>1987</strong>
+            <span>FOLLOWERS</span>
+        </div>
+    
+        <div class="today">
+            <img src="assets/images/icon-up.svg" alt="">
+            <b>12 Today</b>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="top"><img src="assets/images/icon-facebook.svg" alt=""> <span>@nathanf</span></div>
+        <div class="main">
+            <strong>1987</strong>
+            <span>FOLLOWERS</span>
+        </div>
+    
+        <div class="today">
+            <img src="assets/images/icon-up.svg" alt="">
+            <b>12 Today</b>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="top"><img src="assets/images/icon-facebook.svg" alt=""> <span>@nathanf</span></div>
+        <div class="main">
+            <strong>1987</strong>
+            <span>FOLLOWERS</span>
+        </div>
+    
+        <div class="today">
+            <img src="assets/images/icon-up.svg" alt="">
+            <b>12 Today</b>
+        </div>
+    </div>
+-->
+</section>
