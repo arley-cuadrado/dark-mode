@@ -1,97 +1,31 @@
-<section class="container">
+<section class="center">
+<div class="container">
 
     <h2>Overview - Today</h2>
 
-    <main class="container-overview">
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    </main>
+    <div class="container-overview">
 
-    <main class="container-overview">
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
+        <div class="cards" *ngFor=" let item of overviewsDatos ">
+            <div class="top flex"><span> {{ item.titleOverview }} </span> <img src=" {{ item.imageOverview }} " alt=""></div>
             <div class="today flex">
-                <div><strong>1987</strong></div>
+                <div><strong> {{ item.viewsOverview }} </strong></div>
                 <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
+                    <b *ngIf=" item.percentOverview " [class.won-green]=" item.percentOverview > 0 "> 
+                        <img src="assets/images/icon-up.svg" alt="">
+                        <b> {{ item.percentOverview }} %</b>
+                    </b>
+                    <b *ngIf=" item.percentOverviewLost " [class.lost-red]=" item.percentOverviewLost > 0 "> 
+                        <img src="assets/images/icon-down.svg" alt="">
+                        <b> {{ item.percentOverviewLost }} %</b>
+                    </b>
                 </div>
             </div>
         </div>
+
+    </div>
     
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cards">
-            <div class="top flex"><span>Page Views</span> <img src="assets/images/icon-facebook.svg" alt=""></div>
-            <div class="today flex">
-                <div><strong>1987</strong></div>
-                <div class="porcent-over">
-                    <img src="assets/images/icon-up.svg" alt="">
-                    <b>303 %</b>
-                </div>
-            </div>
-        </div>
-    </main>
-    
+</div>
 </section>
+
+
+  

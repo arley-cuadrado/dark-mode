@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .nav{
     display: flex;
     align-items: center;
@@ -5,6 +7,14 @@
     background-color: #f0f5ff;
     position: relative;
     z-index: 9;
+    margin: 0.4rem;
+    h1{
+        margin-bottom: 0.5rem;
+    }
+    span{
+        font-weight: bold;
+        color: $gris;
+    }
     .right-nav{
         display: flex;
         align-items: center;
@@ -52,7 +62,7 @@
 .navbar-bg{
     background-color: #f0f5ff;
     position: absolute;
-    height: 200px;
+    height: 250px;
     width: 100%;
 }
 

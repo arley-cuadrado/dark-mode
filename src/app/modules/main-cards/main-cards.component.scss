@@ -1,20 +1,26 @@
+@import '../../../styles.scss';
+
 .container-cards{
     display: flex;
+    flex-flow: wrap;
     justify-content: space-between;
+    margin-top: 3rem;
 }
 .cards{
     margin-top: 3rem;
     background: #e9f0ff;
     height: auto;
     padding: 2rem;
-    width: 20%;
+    width: 233px;
     text-align: center;
     border-radius: 6px;
     position: relative;
+    //border-top-color: hsl(195, 100%, 50%);
     border-top-color: hsl(195, 100%, 50%);
     border-top-width: medium;
     border-top-style: solid;
     cursor: pointer;
+    margin: 0.4rem;
     &:hover{
         background: #dbe1f0;
         transition: .3s ease all;
@@ -38,6 +44,7 @@
         }
         span{
             letter-spacing: 5px;
+            color: $gris;
         }
     }
     .today{
@@ -45,9 +52,88 @@
         align-items: center;
         justify-content: center;
         font-size: 0.7rem;
-        color: #1EB589;
+        color: $green;
         img{
             margin-right: 4px;
         }
     }
+}
+
+.modal{
+    display: none;
+    .content{
+        justify-content: center;
+        height: 100vh;
+    }
+}
+.modaFalse{
+    display: none;
+}
+.modalTrue{
+    display: block;
+    background: #000000d1;
+    height: 100vh;
+    position: absolute;
+    margin-top: -24rem;
+    width: 100%;
+    z-index: 9;
+    color: white;
+}
+.modal-cards{
+    background: $gray;
+    color: $negro;
+    padding: 1rem 2rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    width: 920px;
+    .close{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        .closeModal{
+            img{
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    .name{
+        display: flex;
+        img{
+            margin-right: 12px;
+        }
+        strong{
+            color: $blueModal;
+        }
+    }
+    .numbers{
+        display: flex;
+        margin-top: 2rem;
+        div{
+            display: flex;
+            align-items: center;
+            strong{
+                margin-right: 12px;
+                font-size: 3rem;
+                color: $gris;
+            }
+            h4{
+                width: 40%;
+                font-weight: initial;
+                color: gray;
+            }
+            .green{
+                color: $green;
+            }
+        }
+        
+    }
+}
+
+.contentModal{
+    background: #fff;
+    color: #1e202a;
+    padding: 1rem 2rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+    width: 920px;
 }
